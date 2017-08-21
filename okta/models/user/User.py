@@ -75,7 +75,7 @@ class User:
                 setattr(self.customData, attr, kwargs[attr])
         
         # Populate profile
-        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone']
+        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone', 'lastLogin']
         for attr in profile_attrs:
             if attr in kwargs:
                 self.profile = self.profile or UserProfile()
