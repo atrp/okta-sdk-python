@@ -7,7 +7,7 @@ class UserProfile:
         'firstName': str,
         'lastName': str,
         'mobilePhone': str,
-        'customData': str
+        'lastLogin': str
     }
 
     def __init__(self):
@@ -24,4 +24,4 @@ class UserProfile:
 
         self.mobilePhone = None  # str
         
-        self.customData = None  # str
+        self.lastLogin = None  # str
