@@ -2,7 +2,7 @@
 class customData:
 
     types = {
-        'lastLogin': str
+        'lastLogin': datetime
     }
 
     def __init__(self):
