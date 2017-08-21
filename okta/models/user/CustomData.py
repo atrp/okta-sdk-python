@@ -1,6 +1,6 @@
 from datetime import datetime
 
-class customData:
+class CustomData:
 
     types = {
         'lastLogin': datetime
