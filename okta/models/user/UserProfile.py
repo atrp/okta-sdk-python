@@ -7,7 +7,9 @@ class UserProfile:
         'firstName': str,
         'lastName': str,
         'mobilePhone': str,
-        'lastLogin': str
+        'lastLogin': str,
+        'portalAccessGroup': str,
+        'reportGroupList': str
     }
 
     def __init__(self):
@@ -25,3 +27,7 @@ class UserProfile:
         self.mobilePhone = None  # str
         
         self.lastLogin = None  # str
+        
+        self.portalAccessGroup = None  # str
+        
+        self.reportGroupList = None  # str
