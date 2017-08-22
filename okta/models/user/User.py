@@ -2,7 +2,6 @@ from datetime import datetime
 
 from okta.models.user.LoginCredentials import LoginCredentials
 from okta.models.user.UserProfile import UserProfile
-from okta.models.user.CustomData import CustomData
 from okta.models.Link import Link
 
 
@@ -19,7 +18,6 @@ class User:
         'passwordChanged': datetime,
         'transitioningToStatus': str,
         'profile': UserProfile,
-        'customData': CustomData,
         'credentials': LoginCredentials
     }
 
@@ -67,15 +65,9 @@ class User:
         self.credentials = None  # LoginCredentials
 
         self.links = None
-
-        customData_attrs = ['lastLogin']
-        for attr in customData_attrs:
-            if attr in kwargs:
-                self.customData = self.customData or CusotmData()
-                setattr(self.customData, attr, kwargs[attr])
         
         # Populate profile
-        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone', 'lastLogin']
+        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone', 'lastLogin', 'portalAccessGroup', 'reportGroupList']
         for attr in profile_attrs:
             if attr in kwargs:
                 self.profile = self.profile or UserProfile()
