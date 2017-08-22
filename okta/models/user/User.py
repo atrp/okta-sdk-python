@@ -67,7 +67,7 @@ class User:
         self.links = None
         
         # Populate profile
-        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone', 'lastLogin', 'portalAccessGroup', 'reportGroupList']
+        profile_attrs = ['login', 'email', 'secondEmail', 'firstName', 'lastName', 'mobilePhone', 'ackClosedAccounts', 'ackNewBusiness', 'closeReport', 'lastLogin', 'portalAccessGroup', 'reportGroupList']
         for attr in profile_attrs:
             if attr in kwargs:
                 self.profile = self.profile or UserProfile()
