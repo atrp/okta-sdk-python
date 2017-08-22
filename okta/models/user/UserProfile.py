@@ -7,6 +7,9 @@ class UserProfile:
         'firstName': str,
         'lastName': str,
         'mobilePhone': str,
+        'ackClosedAccounts': int,
+        'ackNewBusiness': int,
+        'closeReport': int,
         'lastLogin': str,
         'portalAccessGroup': str,
         'reportGroupList': str
@@ -25,6 +28,12 @@ class UserProfile:
         self.lastName = None  # str
 
         self.mobilePhone = None  # str
+        
+        self.ackClosedAccounts = None  # int
+        
+        self.ackNewBusiness = None  # int
+        
+        self.closeReport = None  # int
         
         self.lastLogin = None  # str
         
